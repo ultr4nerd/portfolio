@@ -2,7 +2,7 @@
   <layout>
     <h2>{{ project.name }}</h2>
     <p class="description">{{ project.description }}</p>
-    <p>
+    <p v-if="project.language">
       <small>Language: {{ project.language }}</small>
     </p>
     <div class="buttons">
