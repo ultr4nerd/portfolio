@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <hero />
+    <hero v-if="$route.name !== 'notFound'" />
     <transition name="slide-up" mode="out-in">
       <router-view />
     </transition>
@@ -24,6 +24,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #0d3042;
+  margin: 0;
+  padding: 0;
 }
 
 /* ANIMATIONS */

@@ -4,6 +4,7 @@ import store from '@/store';
 import Home from '@/views/Home.vue';
 import RandomFact from '@/views/RandomFact.vue';
 import RandomProject from '@/views/RandomProject.vue';
+import NotFound from '@/views/NotFound.vue';
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,15 @@ const routes = [
         next();
       });
     },
+  },
+  {
+    path: '/404',
+    name: 'notFound',
+    component: NotFound,
+  },
+  {
+    path: '*',
+    redirect: { name: 'notFound' },
   },
 ];
 
