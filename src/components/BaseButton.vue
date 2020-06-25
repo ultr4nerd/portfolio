@@ -4,13 +4,14 @@
       <slot />
     </button>
   </router-link>
-  <button v-else :class="color">
+  <button v-else :class="color" v-on="$listeners">
     <slot />
   </button>
 </template>
 
 <script>
 export default {
+  inheritAttrs: false,
   props: ["color", "to"]
 };
 </script>

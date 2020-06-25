@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <hero />
-    <transition name="slide-fade" mode="out-in">
+    <transition name="slide-up" mode="out-in">
       <router-view />
     </transition>
   </div>
@@ -27,15 +27,15 @@ export default {
 }
 
 /* ANIMATIONS */
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
+.slide-up-enter-active {
+  transition: all 0.4s ease-out;
 }
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+.slide-up-leave-active {
+  transition: all 0.4s ease-in;
 }
-.slide-fade-enter,
-.slide-fade-leave-to {
-  transform: translateX(10px);
+.slide-up-enter,
+.slide-up-leave-to {
+  transform: translatey(10px);
   opacity: 0;
 }
 </style>

@@ -11,6 +11,12 @@
   >
     <i class="fab fa-spotify"></i>
   </a>
+  <a
+    v-else-if="to === 'email'"
+    href="mailto:mauriciochavez@ciencias.unam.mx"
+  >
+    <i class="fas fa-envelope"></i>
+  </a>
   <button v-else-if="to === 'random'" @click="shuffleColors">
     <i class="fas fa-palette"></i>
   </button>
@@ -29,7 +35,7 @@ export default {
 a {
   text-decoration: none;
   color: #0d3042;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0 5px;
 }
 
@@ -42,7 +48,7 @@ button {
   cursor: pointer;
   outline: inherit;
   color: #0d3042;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0 5px;
 }
 </style>

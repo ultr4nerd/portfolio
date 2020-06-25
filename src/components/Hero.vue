@@ -7,23 +7,30 @@
       <social-button to="github" />
       <social-button to="twitter" />
       <social-button to="spotify" />
+      <social-button to="email" />
       <social-button to="random" />
     </div>
     <div class="buttons">
-      <base-button :color="primary" :to="{ name: 'randomFact' }">Random Fact</base-button>
+      <template v-if="$route.name === 'randomFact'">
+        <base-button :color="primary" @click="getRandomFact">Random Fact</base-button>
+      </template>
+      <template v-else>
+        <base-button :color="primary" :to="{ name: 'randomFact' }">Random Fact</base-button>
+      </template>
       <base-button :color="secondary" :to="{ name: 'randomProject' }">Random Project</base-button>
     </div>
   </header>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 import BaseButton from "@/components/BaseButton.vue";
 import SocialButton from "@/components/SocialButton.vue";
 
 export default {
   components: { BaseButton, SocialButton },
-  computed: mapState(["primary", "secondary"])
+  computed: mapState(["primary", "secondary"]),
+  methods: mapActions(["getRandomFact"])
 };
 </script>
 
@@ -42,7 +49,7 @@ h1 {
 }
 
 p {
-  margin: 10px 0 20px;
+  margin: 10px 0;
 }
 
 img {
