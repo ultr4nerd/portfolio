@@ -1,20 +1,29 @@
 <template>
-  <a v-if="to === 'github'" href="https://github.com/mauricio-chavez">
+  <a
+    v-if="to === 'github'"
+    href="https://github.com/mauricio-chavez"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <i class="fab fa-github"></i>
   </a>
-  <a v-else-if="to === 'twitter'" href="https://twitter.com/ultr4nerd">
+  <a
+    v-else-if="to === 'twitter'"
+    href="https://twitter.com/ultr4nerd"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <i class="fab fa-twitter"></i>
   </a>
   <a
     v-else-if="to === 'spotify'"
     href="https://open.spotify.com/user/12145548904?si=ewmsn26wSvGRJe0SUTHakg"
+    target="_blank"
+    rel="noopener noreferrer"
   >
     <i class="fab fa-spotify"></i>
   </a>
-  <a
-    v-else-if="to === 'email'"
-    href="mailto:mauriciochavez@ciencias.unam.mx"
-  >
+  <a v-else-if="to === 'email'" href="mailto:mauriciochavez@ciencias.unam.mx">
     <i class="fas fa-envelope"></i>
   </a>
   <button v-else-if="to === 'random'" @click="shuffleColors">

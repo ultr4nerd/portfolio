@@ -17,7 +17,12 @@
       <template v-else>
         <base-button :color="primary" :to="{ name: 'randomFact' }">Get random fact</base-button>
       </template>
-      <base-button :color="secondary" :to="{ name: 'randomProject' }">Get a random Project</base-button>
+      <template v-if="$route.name === 'randomProject'">
+        <base-button :color="secondary" @click="getRandomProject">Get a random Project</base-button>
+      </template>
+      <template v-else>
+        <base-button :color="secondary" :to="{ name: 'randomProject' }">Get a random Project</base-button>
+      </template>
     </div>
   </header>
 </template>
@@ -30,7 +35,7 @@ import SocialButton from "@/components/SocialButton.vue";
 export default {
   components: { BaseButton, SocialButton },
   computed: mapState(["primary", "secondary"]),
-  methods: mapActions(["getRandomFact"])
+  methods: mapActions(["getRandomFact", "getRandomProject"])
 };
 </script>
 

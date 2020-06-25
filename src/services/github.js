@@ -10,7 +10,7 @@ const client = axios.create({
 });
 
 export default {
-  getRepos() {
-    return client.get('/users/mauricio-chavez/repos');
-  },
+  getRepo(repo) {
+    return client.get(`/repos/mauricio-chavez/${repo}`);
+  }
 };

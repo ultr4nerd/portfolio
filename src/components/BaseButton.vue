@@ -4,7 +4,12 @@
       <slot />
     </button>
   </router-link>
-  <button v-else :class="color" v-on="$listeners">
+  <a v-else-if="href" :href="href" target="_blank" rel="noopener noreferrer">
+    <button :class="color" class="small">
+      <slot />
+    </button>
+  </a>
+  <button v-else :class="color" v-bind="$attrs" v-on="$listeners">
     <slot />
   </button>
 </template>
@@ -12,7 +17,7 @@
 <script>
 export default {
   inheritAttrs: false,
-  props: ["color", "to"]
+  props: ["color", "to", "href"]
 };
 </script>
 
@@ -36,15 +41,22 @@ button:hover {
   transition: box-shadow 0.2s ease-in;
 }
 
+button.small {
+  height: 30px;
+  margin: 2px 2px 2px 6px;
+  box-shadow: 5px 5px #0d3042;
+  padding: 0 24px;
+}
+
+button.small:hover {
+  box-shadow: 3px 3px #0d3042;
+}
+
 button:focus {
   outline: none;
 }
 
 a {
-  text-decoration: none;
-}
-
-a:visited {
   text-decoration: none;
 }
 
