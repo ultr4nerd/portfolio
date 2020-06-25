@@ -28,6 +28,10 @@ const randomFacts = [
   'I mentored in a Django Girls event. 👨‍👧‍👧',
   'My favorite colors are black, blue and pink. 🎨',
   'My favorite videogames are "Legend of Zelda: Breath of the Wild", "Guitar Hero" and "Gears of War". 👾',
+  'I have two little brothers. I love them. 👦🏻 👶🏻',
+  'I love my family. 💖',
+  'I love reggaeton, I like to dance to Bad Bunny and J Balvin. 🕺🏻',
+  "Same as Naruto, I'll never give up. this is my ninja way. 👍🏻"
 ];
 
 export default function getRandomFact() {

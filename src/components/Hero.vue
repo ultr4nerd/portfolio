@@ -12,12 +12,12 @@
     </div>
     <div class="buttons">
       <template v-if="$route.name === 'randomFact'">
-        <base-button :color="primary" @click="getRandomFact">Random Fact</base-button>
+        <base-button :color="primary" @click="getRandomFact">Get another random fact</base-button>
       </template>
       <template v-else>
-        <base-button :color="primary" :to="{ name: 'randomFact' }">Random Fact</base-button>
+        <base-button :color="primary" :to="{ name: 'randomFact' }">Get a random fact</base-button>
       </template>
-      <base-button :color="secondary" :to="{ name: 'randomProject' }">Random Project</base-button>
+      <base-button :color="secondary" :to="{ name: 'randomProject' }">Get a random Project</base-button>
     </div>
   </header>
 </template>
