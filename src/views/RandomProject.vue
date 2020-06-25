@@ -6,13 +6,13 @@
       <small>Language: {{ project.language }}</small>
     </p>
     <div class="buttons">
-      <base-button :color="projectSecondary" :href="project.html_url">Ver en GitHub</base-button>
+      <base-button :color="projectSecondary" :href="project.html_url">GitHub</base-button>
       <base-button
         v-if="project.homepage"
         :color="projectPrimary"
         :href="project.homepage"
       >
-        Ir al Sitio
+        Website
       </base-button>
     </div>
   </layout>
