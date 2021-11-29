@@ -1,7 +1,7 @@
 <template>
   <a
     v-if="to === 'github'"
-    href="https://github.com/mauricio-chavez"
+    href="https://github.com/ultr4nerd"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -23,7 +23,7 @@
   >
     <i class="fab fa-spotify"></i>
   </a>
-  <a v-else-if="to === 'email'" href="mailto:mauriciochavez@ciencias.unam.mx">
+  <a v-else-if="to === 'email'" href="mailto:mauriciochavezolea@gmail.com">
     <i class="fas fa-envelope"></i>
   </a>
   <button v-else-if="to === 'random'" @click="shuffleColors">

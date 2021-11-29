@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const randomFacts = [
-  'I have been happy with my girlfriend for two years. 👫🏻',
+  "I'm so in love with my partner. 🧡",
   'I became GitHub Campus Expert in May 2020, during quarantine. 🧬',
   'My first paid job was at a department store. 🏪',
   'My favorite band is Arctic Monkeys. 🐵🐵',
@@ -21,7 +21,7 @@ const randomFacts = [
   'I love triangles. ▲',
   'I love hackathons. 👨🏻‍💻',
   "My dog's name is Merckx, is a cute french bulldog. 🐶",
-  'I founded a student community at my school named Raccooon, where we give tech workshops. 👽',
+  'I founded a student community at my school named Raccoons, where we give tech workshops. 👽',
   "I've organized a hackathon. 👨🏻‍💻",
   "Currently I'm co-organizer of GDG UNAM. 🍕",
   'My favorite TV series are Breaking Bad, Silicon Valley and How I Met Your Mother. 📺',
@@ -31,7 +31,9 @@ const randomFacts = [
   'I have two little brothers. I love them. 👦🏻 👶🏻',
   'I love my family. 💖',
   'I love reggaeton, I like to dance to Bad Bunny and J Balvin. 🕺🏻',
-  "Same as Naruto, I'll never give up. this is my ninja way. 👍🏻"
+  "Same as Naruto, I'll never give up. this is my ninja way. 👍🏻",
+  'I love skateboarding. 🛹',
+  'I love cats. 🐈',
 ];
 
 export default function getRandomFact() {

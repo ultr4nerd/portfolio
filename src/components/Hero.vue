@@ -2,7 +2,17 @@
   <header>
     <img src="https://avatars3.githubusercontent.com/u/30444800?v=4" alt="Me" />
     <h1>Hi, I'm Mauricio 👽</h1>
-    <p>A friendly software engineer | GitHub Campus Expert 🚩</p>
+    <p>
+      Backend Engineer at
+      <a
+        :style="{
+          color: primary !== 'yellow' ? primary : 'inherit',
+        }"
+        href="https://cornershopapp.com/"
+        >Cornershop</a
+      >
+      🥑 | GitHub Campus Expert 🚩
+    </p>
     <div class="social-media">
       <social-button to="github" />
       <social-button to="twitter" />
@@ -12,30 +22,38 @@
     </div>
     <div class="buttons">
       <template v-if="$route.name === 'randomFact'">
-        <base-button :color="primary" @click="getRandomFact">Get random fact</base-button>
+        <base-button :color="primary" @click="getRandomFact"
+          >Get random fact</base-button
+        >
       </template>
       <template v-else>
-        <base-button :color="primary" :to="{ name: 'randomFact' }">Get random fact</base-button>
+        <base-button :color="primary" :to="{ name: 'randomFact' }"
+          >Get random fact</base-button
+        >
       </template>
       <template v-if="$route.name === 'randomProject'">
-        <base-button :color="secondary" @click="getRandomProject">Get a random Project</base-button>
+        <base-button :color="secondary" @click="getRandomProject"
+          >Get a random Project</base-button
+        >
       </template>
       <template v-else>
-        <base-button :color="secondary" :to="{ name: 'randomProject' }">Get a random Project</base-button>
+        <base-button :color="secondary" :to="{ name: 'randomProject' }"
+          >Get a random Project</base-button
+        >
       </template>
     </div>
   </header>
 </template>
 
 <script>
-import { mapState, mapActions } from "vuex";
-import BaseButton from "@/components/BaseButton.vue";
-import SocialButton from "@/components/SocialButton.vue";
+import { mapState, mapActions } from 'vuex';
+import BaseButton from '@/components/BaseButton.vue';
+import SocialButton from '@/components/SocialButton.vue';
 
 export default {
   components: { BaseButton, SocialButton },
-  computed: mapState(["primary", "secondary"]),
-  methods: mapActions(["getRandomFact", "getRandomProject"])
+  computed: mapState(['primary', 'secondary']),
+  methods: mapActions(['getRandomFact', 'getRandomProject']),
 };
 </script>
 
@@ -56,6 +74,15 @@ h1 {
 
 p {
   margin: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 900;
+}
+
+a:visited {
+  color: inherit;
 }
 
 img {
