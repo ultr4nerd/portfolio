@@ -34,6 +34,7 @@ const randomFacts = [
   "Same as Naruto, I'll never give up. this is my ninja way. 👍🏻",
   'I love skateboarding. 🛹',
   'I love cats. 🐈',
+  "I have ADHD 👻",
 ];
 
 export default function getRandomFact() {
