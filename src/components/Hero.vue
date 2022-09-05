@@ -8,8 +8,8 @@
         :style="{
           color: primary !== 'yellow' ? primary : 'inherit',
         }"
-        href="https://cornershopapp.com/"
-        >Cornershop</a
+        href="https://www.uber.com/"
+        >Uber</a
       >
       🥑 | GitHub Campus Expert 🚩
     </p>
