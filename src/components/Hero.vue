@@ -1,17 +1,9 @@
 <template>
   <header>
     <img src="https://avatars3.githubusercontent.com/u/30444800?v=4" alt="Me" />
-    <h1>Hi, I'm Mauricio 👽</h1>
+    <h1>Hi, I'm Mau 👽</h1>
     <p>
-      Backend Engineer at
-      <a
-        :style="{
-          color: primary !== 'yellow' ? primary : 'inherit',
-        }"
-        href="https://www.uber.com/"
-        >Uber</a
-      >
-      🥑 | GitHub Campus Expert 🚩
+      Software Engineer 🧑🏻‍💻 and GitHub Campus Expert 🚩
     </p>
     <div class="social-media">
       <social-button to="github" />
